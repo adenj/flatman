@@ -93,9 +93,6 @@ update: function(){
       this.platformsCreateOne(this.rnd.integerInRange( 0, this.world.width-50), this.platformYMin - 100, 50);
     }
   }, this);
-
-
-
 },
 
 addToScore: function(){
