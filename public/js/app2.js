@@ -71,8 +71,6 @@ create: function(){
 
 },
 
-
-
 update: function(){
   // to adjust the y view to the highest point of the player
   this.world.setBounds(0, -this.player.yChange, this.world.width, this.game.height + this.player.yChange);
