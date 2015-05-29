@@ -11,7 +11,7 @@ preload: function(){
   game.load.image('landscreen', 'img/landscreen.png');
   game.load.image('platform', 'img/platform-half.png')
   game.load.image('flatguy', 'img/newguy.png')
-  game.load.image( 'pixel', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/836/pixel_1.png' );
+  game.load.image( 'pixel', 'img/pixel.png' );
   game.load.image( 'test', 'img/test.png' );
   game.load.audio('jump', 'sound/jump.wav');
   game.load.audio('lose', 'sound/lose.wav');
@@ -146,9 +146,11 @@ platformsCreateOne: function(x, y, width){
   } else if(score > 700 && score <1000){
     platform.body.velocity.x = Math.random() * (300 - 220) + 220;
   } else if (score > 1000 && score < 1500){
-    platform.body.velocity.x = Math.random() * (600 - 1) + 1;
-  } else if(score > 1500){
+    platform.body.velocity.x = Math.random() * (600 - 200) + 200;
+  } else if(score > 1500 && score < 2200){
     platform.body.velocity.x = 800;
+  } else if (score > 2200){
+    platform.body.velocity.x = 1200;
   }
   return platform;
 },
@@ -194,10 +196,6 @@ playerMove: function(){
   if(this.player.y > this.cameraYMin + this.game.height && this.player.alive){
     lose.play();
     this.state.start('Play');
-
-    function nothing(){
-
-    }
   }
 }
 
