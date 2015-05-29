@@ -8,12 +8,9 @@ KanyeJump.Play = function() {};
 KanyeJump.Play.prototype = {
 
 preload: function(){
-  game.load.spritesheet('dude', 'img/dude.png', 32, 48);
-  game.load.image('kanye', 'img/kanye.png');
   game.load.image('landscreen', 'img/landscreen.png');
-  game.load.image('ground', 'img/ground2.png');
   game.load.image('platform', 'img/platform-half.png')
-  game.load.image('flatguy', 'img/player.png')
+  game.load.image('flatguy', 'img/newguy.png')
   game.load.image( 'pixel', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/836/pixel_1.png' );
   game.load.image( 'test', 'img/test.png' );
   game.load.audio('jump', 'sound/jump.wav');
